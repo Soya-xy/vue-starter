@@ -1,0 +1,6 @@
+import 'virtual:uno.css'
+import '@unocss/reset/tailwind.css'
+import '@arco-design/web-vue/es/message/style'
+import '@arco-design/web-vue/es/modal/style'
+import './global.css'
+import './arco.css'

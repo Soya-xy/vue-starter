@@ -1,0 +1,41 @@
+.arco-card {
+  @apply flex flex-col h-full overflow-auto;
+}
+
+.arco-card-body {
+  @apply flex-1 overflow-auto;
+}
+
+.arco-card.no-padding > .arco-card-body {
+  @apply !p-0;
+}
+
+.arco-card-header-extra {
+  @apply !color-unset ml-4;
+}
+
+.arco-drawer-container.no-padding .arco-drawer-body {
+  @apply !p-0;
+}
+
+.arco-btn-group .arco-btn:not(:last-child) {
+  border-right: 0 !important;
+}
+
+.arco-btn-text.clear,
+.arco-btn-group.clear .arco-btn-text {
+  color: var(--color-text-2) !important;
+}
+
+.arco-table-filters {
+  @apply absolute flex;
+}
+
+.arco-switch {
+  /* 不知道为什么被设置成了transparent */
+  background-color: var(--color-fill-4);
+}
+
+.arco-dropdown-open .arco-icon-down {
+  transform: rotate(180deg);
+}

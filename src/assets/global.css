@@ -1,0 +1,33 @@
+body {
+  color: var(--color-text-2);
+  background-color: var(--color-bg-1);
+}
+
+.active,
+.active td {
+  color: var(--color-text-1);
+  background-color: var(--color-fill-3);
+}
+
+* {
+  @apply select-none;
+}
+
+*:focus {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 4px; /* width of the entire scrollbar */
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px; /* roundness of the scroll thumb */
+
+  @apply bg-gray-400; /* color of the scroll thumb */
+}

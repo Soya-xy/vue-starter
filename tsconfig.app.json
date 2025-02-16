@@ -1,0 +1,17 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    },
+    "types": ["./auto-imports", "./components"]
+  },
+  "vueCompilerOptions": {
+    "experimentalDefinePropProposal": "johnsonEdition"
+  },
+  "include": ["*.d.ts", "src/**/*.ts", "src/**/*.vue"]
+}

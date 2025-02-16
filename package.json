@@ -1,0 +1,83 @@
+{
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "lint": "pnpm lint:ts && pnpm lint:js && pnpm lint:css",
+    "lint:ts": "vue-tsc --build --force",
+    "lint:js": "eslint --ignore-pattern .gitignore .",
+    "lint:js:fix": "eslint --ignore-pattern .gitignore . --fix",
+    "lint:css": "stylelint **/*.{css,less,vue} --ignore-path .gitignore",
+    "test": "vitest run --bail 1 --exclude tmp/**",
+    "git": "simple-git-hooks",
+    "upi": "pnpm up -L -i"
+  },
+  "dependencies": {
+    "@alova/scene-vue": "^1.6.2",
+    "@vueuse/components": "^12.5.0",
+    "@vueuse/core": "^12.5.0",
+    "@vueuse/integrations": "^12.5.0",
+    "alova": "^3.2.8",
+    "dayjs": "^1.11.13",
+    "pathe": "^2.0.2",
+    "pretty-bytes": "^6.1.1",
+    "ramda": "^0.30.1",
+    "ufo": "^1.5.4",
+    "universal-cookie": "^7.2.2",
+    "uuid": "^11.0.5",
+    "vanilla-jsoneditor": "^2.3.3",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.1.1",
+    "@arco-design/web-vue": "^2.56.3",
+    "@arco-plugins/vite-vue": "^1.4.5",
+    "@iconify/json": "^2.2.304",
+    "@tsconfig/node-lts": "^22.0.1",
+    "@types/node": "^22.13.1",
+    "@types/ramda": "^0.30.2",
+    "@types/uuid": "^10.0.0",
+    "@unocss/eslint-plugin": "65.4.3",
+    "@unocss/reset": "65.4.3",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
+    "@vue/tsconfig": "^0.7.0",
+    "eslint": "^9.20.0",
+    "eslint-plugin-format": "^1.0.1",
+    "less": "^4.2.2",
+    "lint-staged": "^15.4.3",
+    "rollup-plugin-visualizer": "^5.14.0",
+    "simple-git-hooks": "^2.11.1",
+    "stylelint": "^16.14.1",
+    "stylelint-config-recommended-vue": "^1.6.0",
+    "stylelint-config-standard": "^37.0.0",
+    "typescript": "^5.7.3",
+    "unocss": "^65.4.3",
+    "unplugin-auto-import": "^19.0.0",
+    "unplugin-vue-components": "^28.0.0",
+    "unplugin-vue-macros": "2.14.2",
+    "unplugin-vue-router": "^0.11.2",
+    "vite": "^6.1.0",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-mars3d": "^4.2.2",
+    "vite-plugin-vue-devtools": "^7.7.1",
+    "vite-plugin-vue-layouts": "^0.11.0",
+    "vitest": "^3.0.5",
+    "vue-tsc": "^2.2.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint",
+    "*.{css,less,vue}": "stylelint"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
+}
